@@ -19,9 +19,9 @@ router.get('/:id',async (req,res)=>{
     res.status(200).json(work)
 } )
 router.post('/',async (req,res)=>{
-    const {name,email}=req.body
+    const {firstName,lastName,email,dob,branch,city,  fatherName,motherName,fatherMobileNumber,motherMobileNumber,fatherEmail,motherEmail,hobbies,interestedGames}=req.body
     try{
-        const wot=await topwo.create({name,email})
+        const wot=await topwo.create({firstName,lastName,email,dob,branch,city,  fatherName,motherName,fatherMobileNumber,motherMobileNumber,fatherEmail,motherEmail,hobbies,interestedGames})
         res.status(200).json(wot)
     }
     catch(err){
